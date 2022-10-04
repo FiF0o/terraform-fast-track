@@ -13,17 +13,18 @@ resource "aws_security_group"  "webtraffic"{
 
   # Stateful
   ingress {
-    # single port - https
-    from_port = 433
-    to_port = 433
+    # single port - https (inbound)
+    from_port = 443
+    to_port = 443
     protocol = "TCP"
     # allow all traffic
     cidr_blocks = ["0.0.0.0/0"]
   }
 
+  # outbound
   egress {
-    from_port = 433
-    to_port = 433
+    from_port = 443
+    to_port = 443
     protocol = "TCP"
     # allow all traffic
     cidr_blocks = ["0.0.0.0/0"]
