@@ -1,3 +1,9 @@
+# Creates a db, web instance with eip with sg hosting a hello world
+
+provider "aws" {
+  region = "eu-west-2"
+}
+
 resource "aws_instance" "db" {
   ami = "ami-00785f4835c6acf64"
   instance_type = "t2.micro"
