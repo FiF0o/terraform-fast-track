@@ -8,3 +8,7 @@ module "ec2module" {
   # define value of variable to be assigned from ec2 module
   ec2name = "Name from module"
 }
+
+output "module_output" {
+  value = module.ec2module.instance_id
+}
