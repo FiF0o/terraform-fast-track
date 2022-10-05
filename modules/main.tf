@@ -1,4 +1,9 @@
 # Run tf init every time modules are updated
+
+#####################################################################################################
+# tf modules: https://registry.terraform.io/modules/terraform-aws-modules/vpc/aws/latest?tab=readme #
+#####################################################################################################
+
 provider "aws" {
   region = "eu-west-2"
 }
